@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛠️ ANDON DIGITAL - MANTENIMIENTO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>🛠️ ANDON DIGITAL - MANTENIMIENTO</h1>
+        <div class="header-info">
+            <div class="info-item">
+                <span>🕒</span>
+                <span id="current-time"></span>
+            </div>
+            <div class="info-item">
+                <span>📊</span>
+                <span id="total-machines">0 Máquinas</span>
+            </div>
+            <div class="info-item">
+                <span>🔄</span>
+                <span>Auto-actualización: 60s</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="controls">
+        <button class="btn-refresh" onclick="loadData()">
+            🔄 Actualizar Datos
+        </button>
+    </div>
+
+    <div class="container">
+        <div id="content">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Cargando datos del sistema...</p>
+            </div>
+        </div>
+        <div class="last-update">
+            Última actualización: <span id="last-update-time">--</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
